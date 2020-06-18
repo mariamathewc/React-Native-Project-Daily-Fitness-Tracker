@@ -13,6 +13,8 @@ import { white, purple, red } from './utils/colors'
 import Constants from 'expo-constants'
 import EntryDetail from './components/EntryDetail'
 import { createStackNavigator } from '@react-navigation/stack';
+import Live from './components/Live'
+import { setLocalNotification } from './utils/helpers'
 
 
 function AppStatusBar({ backgroundColor, ...props }) {
@@ -34,6 +36,12 @@ const RouteConfigs = {
         component: AddEntry,
         name: "Add Entry",
         options: { tabBarIcon: ({ tintColor }) => <FontAwesome name='plus-square' size={30} color={tintColor} />, title: 'Add Entry' }
+    },
+
+    Live: {
+        component: Live,
+        name: "Live",
+        options: {  tabBarIcon: ({ tintColor }) => <Ionicons name='ios-speedometer' size={30} color={tintColor} /> , title: 'Live'  }
     }
 }
 
@@ -65,6 +73,7 @@ const TabNav = () => (
     <Tab.Navigator {...TabNavigatorConfig}>
         <Tab.Screen {...RouteConfigs['History']} />
         <Tab.Screen {...RouteConfigs['AddEntry']} />
+        <Tab.Screen {...RouteConfigs['Live']} />
     </Tab.Navigator>
 )
 
@@ -102,6 +111,9 @@ const MainNav = () => (
 
 // App 
 export default class App extends React.Component {
+    componentDidMount() {
+        setLocalNotification()
+    }
     render() {
         const store = createStore(reducer)
         return (

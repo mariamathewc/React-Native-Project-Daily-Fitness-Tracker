@@ -1,28 +1,20 @@
 {
   "expo": {
-    "name": "dailyfitnesstracker",
-    "slug": "snack-a1541a2e-0d8f-4140-8824-e0cdb18c84e5",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.0.0",
+    "sdkVersion": "37.0.0",
     "orientation": "portrait",
-    "icon": "",
-    "splash": {
-      "image": "",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+    "name": "Daily Fitness Tracker",
+    "description": "The best triathlon tracker ever",
+    "slug": "udacfitness",
+    "version": "1.0",
+    "icon": "https://cdn0.iconfinder.com/data/icons/basic-11/97/45-512.png",
+    "notification": {
+      "icon": "https://cdn0.iconfinder.com/data/icons/basic-11/97/45-512.png"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "org.udacifitness.exp"
+    },
+    "android": {
+      "package": "org.udacifitness.exp"
     }
   }
 }
