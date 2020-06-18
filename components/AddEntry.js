@@ -10,6 +10,7 @@ import { submitEntry, removeEntry } from '../utils/api';
 import { connect } from 'react-redux'
 import { addEntry } from '../actions'
 import { purple, white } from "../utils/colors";
+import { CommonActions } from '@react-navigation/native';
 
 function SubmitBtn({ onPress }) {
     return (
@@ -73,7 +74,7 @@ class AddEntry extends Component {
         this.setState(() => ({ run: 0, bike: 0, swim: 0, sleep: 0, eat: 0 }))
 
         // Navigate to home
-
+        this.toHome()
         // Save to "DB"
         submitEntry({ key, entry })
 
@@ -90,12 +91,17 @@ class AddEntry extends Component {
         }))
 
         // Route to Home
-
+        this.toHome()
         // Update "DB"
         removeEntry(key)
 
     };
-
+    toHome = () => {
+        this.props.navigation.dispatch(
+            CommonActions.goBack({
+                key: 'AddEntry',
+            }))
+    }
     render() {
         const metaInfo = getMetricMetaInfo()
 
