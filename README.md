@@ -10,4 +10,6 @@ This is a React Native mobile application that works on both ios and android pla
   <li>Run <b>yarn start</b> to start the app and open expo app on your mobile</li>
  </ul>
  
+<h2>Demo</h2>
 
+![](DailyFitnessTracker.gif)
