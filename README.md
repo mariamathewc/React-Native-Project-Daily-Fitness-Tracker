@@ -1,11 +1,13 @@
-# Sample Snack app
+<h2>About</h2>
+This is a React Native mobile application that works on both ios and android platform. It allow users to track their daily fitness. It is built with redux store and local storage. Daily notifications are send at 8:00 pm every day to encourage user to keep the progress!
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by clicking the **Run** button or use the simulator by clicking **Tap to Play**. When you're done, click **Save** and share the link!
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Export** your project and use it with [expo-cli](https://docs.expo.io/versions/latest/introduction/installation.html).
+<h2>Getting Started</h2>
+<ul>
+  <li>Run <b>git clone https://github.com/mariamathewc/React-Native-Project-Daily-Fitness-Tracker.git </b>to clone this repository</li>
+  <li>Navigate to Daily-Fitness-Tracker using <b>cd Daily-Fitness-Tracker</b></li> 
+  <li>Run <b>yarn install</b></li>
+  <li>Run <b>yarn start</b> to start the app and open expo app on your mobile</li>
+ </ul>
+ 
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the **Embed** button.
-
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io).
-
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack-web).
